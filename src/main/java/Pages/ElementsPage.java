@@ -3,6 +3,7 @@ package Pages;
 import Pages.Elements.CheckBoxPage;
 import Pages.Elements.RadioButtonPage;
 import Pages.Elements.TextBoxPage;
+import Pages.Elements.WebTablePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Wait;
@@ -39,6 +40,11 @@ public class ElementsPage {
     public RadioButtonPage clickRadioButtonPage(){
         clickComponent("item-2");
         return new RadioButtonPage(driver);
+    }
+
+    public WebTablePage clickWebTablePage(){
+        clickComponent("item-3");
+        return new WebTablePage(driver);
     }
     private void clickComponent(String id){
         driver.findElement(By.id(id)).click();
